@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Apto AI | AI-Powered CRM for Smarter Lead Management</title>
+
+  <meta name="description" content="Apto AI is an AI-powered adaptive CRM that helps businesses capture leads, qualify prospects, automate follow-ups, route enquiries, and convert more customers with smarter workflows." />
+
+  <meta name="keywords" content="Apto AI, aptoai.app, AI CRM, Adaptive CRM, Lead Management CRM, Sales Automation, CRM Automation, AI Lead Management, Business CRM Software, Lead Conversion Software" />
+
+  <link rel="canonical" href="https://aptoai.app/" />
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      overflow-x: hidden;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #fff7ed;
+      color: #1c1917;
+      line-height: 1.7;
+    }
+
+    .page {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 18px 16px 44px;
+    }
+
+    .text-link {
+      color: #ea580c;
+      font-weight: 900;
+      text-decoration: none;
+      border-bottom: 2px solid rgba(234, 88, 12, 0.28);
+    }
+
+    .text-link:hover {
+      color: #1c1917;
+      border-bottom-color: #1c1917;
+    }
+
+    .top-nav {
+      background: #ffffff;
+      border: 1px solid #fed7aa;
+      border-radius: 24px;
+      padding: 14px 18px;
+      margin-bottom: 22px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      box-shadow: 0 12px 30px rgba(154, 52, 18, 0.08);
+    }
+
+    .logo {
+      font-size: 22px;
+      font-weight: 900;
+      text-decoration: none;
+      color: #1c1917;
+      letter-spacing: -0.5px;
+    }
+
+    .nav-btn {
+      background: #ea580c;
+      color: #ffffff;
+      padding: 10px 17px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: 900;
+      font-size: 14px;
+      box-shadow: 0 10px 20px rgba(234, 88, 12, 0.22);
+    }
+
+    .hero {
+      background:
+        radial-gradient(circle at 12% 18%, rgba(251, 146, 60, 0.35), transparent 28%),
+        linear-gradient(135deg, #1c1917 0%, #7c2d12 52%, #ea580c 100%);
+      color: #ffffff;
+      border-radius: 36px;
+      overflow: hidden;
+      display: grid;
+      grid-template-columns: 1.05fr 0.95fr;
+      min-height: 560px;
+      box-shadow: 0 28px 70px rgba(124, 45, 18, 0.28);
+    }
+
+    .hero-left {
+      padding: 62px 42px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      position: relative;
+    }
+
+    .hero-left::before {
+      content: "";
+      position: absolute;
+      width: 280px;
+      height: 280px;
+      border-radius: 50%;
+      background: rgba(251, 146, 60, 0.18);
+      top: -120px;
+      left: -120px;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+    }
+
+    .badge {
+      display: inline-block;
+      width: fit-content;
+      background: rgba(255, 237, 213, 0.15);
+      color: #fed7aa;
+      border: 1px solid rgba(254, 215, 170, 0.35);
+      padding: 8px 16px;
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 900;
+      margin-bottom: 18px;
+      letter-spacing: 0.3px;
+    }
+
+    .hero h1 {
+      font-size: clamp(36px, 5vw, 64px);
+      line-height: 1.05;
+      margin: 0 0 18px;
+      color: #ffffff;
+      letter-spacing: -1.5px;
+    }
+
+    .hero p {
+      font-size: 17px;
+      color: #ffedd5;
+      margin: 0 0 16px;
+      max-width: 720px;
+    }
+
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 22px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 13px 22px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 900;
+      border: 2px solid transparent;
+      transition: 0.25s ease;
+    }
+
+    .btn-orange {
+      background: #f97316;
+      color: #ffffff;
+      border-color: #f97316;
+    }
+
+    .btn-white {
+      background: #ffffff;
+      color: #1c1917;
+      border-color: #ffffff;
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: #ffffff;
+      border-color: rgba(255, 255, 255, 0.65);
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 14px 30px rgba(0, 0, 0, 0.18);
+    }
+
+    .hero-right {
+      background: #fff7ed;
+      padding: 34px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .crm-board {
+      width: 100%;
+      background: #ffffff;
+      color: #1c1917;
+      border-radius: 30px;
+      padding: 26px;
+      box-shadow: 0 28px 65px rgba(124, 45, 18, 0.22);
+      border: 1px solid #fed7aa;
+    }
+
+    .crm-board h2 {
+      font-size: 28px;
+      line-height: 1.22;
+      margin: 0 0 10px;
+      color: #1c1917;
+    }
+
+    .crm-board p {
+      color: #57534e;
+      font-size: 15px;
+      margin: 0 0 18px;
+    }
+
+    .lead-card {
+      background: #fff7ed;
+      border: 1px solid #fed7aa;
+      border-radius: 18px;
+      padding: 15px;
+      margin-bottom: 12px;
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      align-items: center;
+    }
+
+    .lead-card strong {
+      color: #1c1917;
+      font-size: 15px;
+    }
+
+    .lead-card span {
+      background: #ffedd5;
+      color: #c2410c;
+      border-radius: 999px;
+      padding: 6px 10px;
+      font-size: 12px;
+      font-weight: 900;
+      white-space: nowrap;
+    }
+
+    .section {
+      background: #ffffff;
+      border: 1px solid #fed7aa;
+      border-radius: 30px;
+      padding: 36px 30px;
+      margin-top: 24px;
+      box-shadow: 0 14px 35px rgba(154, 52, 18, 0.08);
+    }
+
+    .section h2 {
+      font-size: clamp(26px, 3.4vw, 40px);
+      line-height: 1.2;
+      margin: 0 0 14px;
+      color: #1c1917;
+      letter-spacing: -0.6px;
+    }
+
+    .section p {
+      color: #57534e;
+      font-size: 16px;
+      margin: 0 0 15px;
+    }
+
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 16px;
+      margin-top: 24px;
+    }
+
+    .feature-card {
+      background: #fff7ed;
+      border: 1px solid #fed7aa;
+      border-radius: 24px;
+      padding: 22px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .feature-card::after {
+      content: "";
+      position: absolute;
+      width: 86px;
+      height: 86px;
+      border-radius: 50%;
+      background: #fb923c;
+      right: -34px;
+      top: -34px;
+      opacity: 0.18;
+    }
+
+    .feature-card h3 {
+      color: #1c1917;
+      font-size: 19px;
+      margin: 0 0 8px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .feature-card p {
+      color: #57534e;
+      font-size: 14px;
+      margin: 0;
+      position: relative;
+      z-index: 2;
+    }
+
+    .split-section {
+      display: grid;
+      grid-template-columns: 0.95fr 1.05fr;
+      gap: 22px;
+      margin-top: 24px;
+      align-items: stretch;
+    }
+
+    .orange-box {
+      background:
+        radial-gradient(circle at 85% 15%, rgba(255, 237, 213, 0.20), transparent 25%),
+        linear-gradient(135deg, #ea580c, #9a3412);
+      color: #ffffff;
+      border-radius: 30px;
+      padding: 34px 28px;
+      box-shadow: 0 18px 45px rgba(154, 52, 18, 0.22);
+    }
+
+    .orange-box h2 {
+      color: #ffffff;
+      margin: 0 0 12px;
+      font-size: clamp(26px, 3vw, 38px);
+      line-height: 1.2;
+    }
+
+    .orange-box p {
+      color: #ffedd5;
+      margin: 0 0 16px;
+    }
+
+    .white-link {
+      color: #ffffff;
+      font-weight: 900;
+      text-decoration: none;
+      border-bottom: 2px solid rgba(255, 255, 255, 0.45);
+    }
+
+    .steps {
+      display: grid;
+      gap: 14px;
+    }
+
+    .step {
+      background: #ffffff;
+      border: 1px solid #fed7aa;
+      border-radius: 24px;
+      padding: 20px;
+      display: grid;
+      grid-template-columns: 52px 1fr;
+      gap: 14px;
+      align-items: start;
+      box-shadow: 0 10px 24px rgba(154, 52, 18, 0.06);
+    }
+
+    .step-number {
+      width: 52px;
+      height: 52px;
+      border-radius: 18px;
+      display: grid;
+      place-items: center;
+      background: #ffedd5;
+      color: #c2410c;
+      font-weight: 900;
+      font-size: 18px;
+    }
+
+    .step h3 {
+      margin: 0 0 6px;
+      color: #1c1917;
+      font-size: 19px;
+    }
+
+    .step p {
+      margin: 0;
+      color: #57534e;
+      font-size: 14px;
+    }
+
+    .highlight-strip {
+      margin-top: 24px;
+      background: #1c1917;
+      color: #ffffff;
+      border-radius: 30px;
+      padding: 30px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 14px;
+      box-shadow: 0 20px 45px rgba(28, 25, 23, 0.18);
+    }
+
+    .highlight-item {
+      border: 1px solid rgba(254, 215, 170, 0.18);
+      border-radius: 22px;
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.04);
+    }
+
+    .highlight-item strong {
+      display: block;
+      color: #fed7aa;
+      font-size: 28px;
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+
+    .highlight-item span {
+      color: #ffedd5;
+      font-size: 14px;
+    }
+
+    .cta {
+      background:
+        radial-gradient(circle at 18% 20%, rgba(251, 146, 60, 0.30), transparent 28%),
+        linear-gradient(135deg, #1c1917, #7c2d12, #f97316);
+      color: #ffffff;
+      border-radius: 34px;
+      text-align: center;
+      padding: 44px 28px;
+      margin-top: 24px;
+      box-shadow: 0 22px 55px rgba(124, 45, 18, 0.28);
+    }
+
+    .cta h2 {
+      color: #ffffff;
+      font-size: clamp(28px, 4vw, 46px);
+      line-height: 1.15;
+      margin: 0 0 12px;
+    }
+
+    .cta p {
+      color: #ffedd5;
+      max-width: 840px;
+      margin: 0 auto 22px;
+      font-size: 16px;
+    }
+
+    .footer-link {
+      text-align: center;
+      margin-top: 18px;
+      color: #57534e;
+      font-size: 14px;
+    }
+
+    @media (max-width: 920px) {
+      .hero,
+      .split-section {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        min-height: auto;
+      }
+
+      .hero-left {
+        padding: 44px 24px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .page {
+        padding: 12px 12px 32px;
+      }
+
+      .top-nav {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .hero,
+      .section,
+      .orange-box,
+      .cta,
+      .highlight-strip {
+        border-radius: 22px;
+      }
+
+      .hero-left,
+      .hero-right {
+        padding: 28px 18px;
+      }
+
+      .section,
+      .orange-box,
+      .highlight-strip {
+        padding: 26px 18px;
+      }
+
+      .buttons {
+        flex-direction: column;
+      }
+
+      .btn {
+        width: 100%;
+        text-align: center;
+      }
+
+      .step {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="page">
+
+    <header class="top-nav">
+      <a href="https://aptoai.app/" target="_blank" rel="noopener" class="logo">Apto AI</a>
+      <a href="https://aptoai.app/" target="_blank" rel="noopener" class="nav-btn">Visit aptoai.app</a>
+    </header>
+
+    <section class="hero">
+      <div class="hero-left">
+        <div class="hero-content">
+          <span class="badge">AI-Powered Adaptive CRM</span>
+
+          <h1>Turn Every Lead Into a Smarter Sales Opportunity.</h1>
+
+          <p>
+            Apto AI is built for businesses that want a faster, smarter, and more organized way to manage enquiries,
+            sales follow-ups, and lead conversion. Explore the platform at
+            <a href="https://aptoai.app/" target="_blank" rel="noopener" class="white-link">aptoai.app</a>.
+          </p>
+
+          <p>
+            With
+            <a href="https://aptoai.app/" target="_blank" rel="noopener" class="white-link">Apto AI</a>,
+            your team can capture leads, qualify prospects, assign enquiries, automate follow-ups, and move every
+            opportunity closer to conversion.
+          </p>
+
+          <div class="buttons">
+            <a href="https://aptoai.app/" target="_blank" rel="noopener" class="btn btn-orange">Visit Website</a>
+            <a href="https://aptoai.app/" target="_blank" rel="noopener" class="btn btn-white">Explore AI CRM</a>
+            <a href="https://aptoai.app/" target="_blank" rel="noopener" class="btn btn-outline">Request Demo</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-right">
+        <div class="crm-board">
+          <h2>Apto AI Lead Journey</h2>
+
+          <p>
+            From first enquiry to final conversion, manage your complete sales process with intelligent CRM automation.
+          </p>
+
+          <div class="lead-card">
+            <strong>Lead Captured</strong>
+            <span>Organized</span>
+          </div>
+
+          <div class="lead-card">
+            <strong>Prospect Qualified</strong>
+            <span>AI Assisted</span>
+          </div>
+
+          <div class="lead-card">
+            <strong>Lead Routed to Team</strong>
+            <span>Smart Flow</span>
+          </div>
+
+          <div class="lead-card">
+            <strong>Follow-Up Automated</strong>
+            <span>Faster Action</span>
+          </div>
+
+          <div class="lead-card">
+            <strong>Opportunity Converted</strong>
+            <span>Growth</span>
+          </div>
+
+          <p style="margin-top: 16px;">
+            Learn more at
+            <a href="https://aptoai.app/" target="_blank" rel="noopener" class="text-link">https://aptoai.app/</a>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>AI CRM Software for Businesses That Depend on Leads</h2>
+
+      <p>
+        Most businesses do not lose leads because they lack demand. They lose leads because enquiries are scattered,
+        follow-ups are delayed, and sales teams do not have a clear system to track every opportunity.
+        <a href="https://aptoai.app/" target="_blank" rel="noopener" class="text-link">Apto AI</a>
+        helps businesses bring lead management, sales automation, communication, and team workflows into one adaptive CRM.
+      </p>
+
+      <p>
+        Whether you run a service business, real estate company, marketing agency, clinic, coaching institute, SaaS brand,
+        or B2B sales team,
+        <a href="https://aptoai.app/" target="_blank" rel="noopener" class="text-link">aptoai.app</a>
+        gives your business a smarter way to manage leads and improve conversions.
+      </p>
+
+      <div class="feature-grid">
+        <div class="feature-card">
+          <h3>Lead Capture</h3>
+          <p>Collect enquiries from different sources and keep every lead organized inside one CRM workflow.</p>
+        </div>
+
+        <div class="feature-card">
+          <h3>Lead Qualification</h3>
+          <p>Understand which prospects need faster attention and which opportunities have higher conversion potential.</p>
+        </div>
+
+        <div class="feature-card">
+          <h3>Smart Routing</h3>
+          <p>Assign enquiries to the right team member so every lead gets a timely and relevant response.</p>
+        </div>
+
+        <div class="feature-card">
+          <h3>Follow-Up Automation</h3>
+          <p>Create smarter follow-up flows that keep prospects engaged without depending on manual reminders.</p>
+        </div>
+
+        <div class="feature-card">
+          <h3>Sales Pipeline Clarity</h3>
+          <p>Track lead movement, sales status, team actions, and conversion progress with better visibility.</p>
+        </div>
+
+        <div class="feature-card">
+          <h3>Lead Conversion Support</h3>
+          <p>Improve enquiry handling and give your sales team a better system to convert more customers.</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="split-section">
+      <section class="orange-box">
+        <h2>Built to Adapt to Your Sales Process</h2>
+
+        <p>
+          Every business has a different way of handling leads. Apto AI is designed as an adaptive CRM, which means it
+          supports your workflow instead of forcing your team into a fixed process.
+        </p>
+
+        <p>
+          From enquiry tracking to lead nurturing, discover how
+          <a href="https://aptoai.app/" target="_blank" rel="noopener" class="white-link">Apto AI</a>
+          can make your CRM process more intelligent, flexible, and conversion-focused.
+        </p>
+
+        <div class="buttons">
+          <a href="https://aptoai.app/" target="_blank" rel="noopener" class="btn btn-white">Open aptoai.app</a>
+        </div>
+      </section>
+
+      <section class="steps">
+        <div class="step">
+          <div class="step-number">01</div>
+          <div>
+            <h3>Capture Every Enquiry</h3>
+            <p>Bring calls, campaign leads, website enquiries, forms, and sales opportunities into a structured CRM process.</p>
+          </div>
+        </div>
+
+        <div class="step">
+          <div class="step-number">02</div>
+          <div>
+            <h3>Qualify & Prioritize</h3>
+            <p>Help your team focus on the right leads first, instead of wasting time on unorganized data.</p>
+          </div>
+        </div>
+
+        <div class="step">
+          <div class="step-number">03</div>
+          <div>
+            <h3>Route & Follow Up</h3>
+            <p>Assign leads to the right person and create better follow-up discipline for faster response.</p>
+          </div>
+        </div>
+
+        <div class="step">
+          <div class="step-number">04</div>
+          <div>
+            <h3>Nurture & Convert</h3>
+            <p>Move prospects forward with smarter communication, timely actions, and sales-focused automation.</p>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <section class="highlight-strip">
+      <div class="highlight-item">
+        <strong>01</strong>
+        <span>Smarter lead tracking for growing businesses.</span>
+      </div>
+
+      <div class="highlight-item">
+        <strong>02</strong>
+        <span>AI-assisted workflows for better sales action.</span>
+      </div>
+
+      <div class="highlight-item">
+        <strong>03</strong>
+        <span>Faster response with organized team routing.</span>
+      </div>
+
+      <div class="highlight-item">
+        <strong>04</strong>
+        <span>Better follow-ups to improve lead conversion.</span>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Who Can Use Apto AI?</h2>
+
+      <p>
+        <a href="https://aptoai.app/" target="_blank" rel="noopener" class="text-link">Apto AI</a>
+        is useful for businesses that receive regular enquiries and want a reliable system to manage their sales pipeline,
+        lead follow-ups, team assignments, and conversion journey.
+      </p>
+
+      <div class="feature-grid">
+        <div class="feature-card">
+          <h3>Sales Teams</h3>
+          <p>Manage pipeline movement, lead status, follow-ups, and customer conversion in one CRM workflow.</p>
+        </div>
+
+        <div class="feature-card">
+          <h3>Marketing Agencies</h3>
+          <p>Track campaign leads, improve enquiry response, and manage client lead pipelines more professionally.</p>
+        </div>
+
+        <div class="feature-card">
+          <h3>Real Estate Brands</h3>
+          <p>Organize buyer enquiries, site visits, project interest, inventory leads, and sales follow-up cycles.</p>
+        </div>
+
+        <div class="feature-card">
+          <h3>Clinics & Institutes</h3>
+          <p>Manage appointment enquiries, admission leads, patient queries, and follow-up communication.</p>
+        </div>
+
+        <div class="feature-card">
+          <h3>Service Businesses</h3>
+          <p>Keep calls, forms, enquiries, and client communication structured for better conversion.</p>
+        </div>
+
+        <div class="feature-card">
+          <h3>B2B Companies</h3>
+          <p>Improve prospect tracking, sales coordination, and long-cycle lead nurturing with adaptive CRM workflows.</p>
+        </div>
+      </div>
+
+      <p style="margin-top: 20px;">
+        To explore the platform and promote your CRM upgrade, visit
+        <a href="https://aptoai.app/" target="_blank" rel="noopener" class="text-link">https://aptoai.app/</a>.
+      </p>
+    </section>
+
+    <section class="section">
+      <h2>Why Promote Apto AI?</h2>
+
+      <p>
+        Businesses today need more than a basic contact list. They need a CRM that can support lead capture, sales activity,
+        follow-up discipline, workflow automation, and team visibility. That is why
+        <a href="https://aptoai.app/" target="_blank" rel="noopener" class="text-link">Apto AI</a>
+        is positioned as a smarter CRM solution for modern businesses.
+      </p>
+
+      <p>
+        The platform can be promoted as a solution for companies that want to stop missing enquiries, reduce manual tracking,
+        respond faster, and build a more conversion-focused sales process. For more details, visit
+        <a href="https://aptoai.app/" target="_blank" rel="noopener" class="text-link">aptoai.app</a>.
+      </p>
+    </section>
+
+    <section class="cta">
+      <h2>Ready to Make Lead Management Smarter?</h2>
+
+      <p>
+        Stop depending on scattered sheets, delayed follow-ups, and manual lead tracking. With Apto AI, your business can
+        capture, qualify, route, nurture, and convert leads through intelligent CRM automation.
+        Visit
+        <a href="https://aptoai.app/" target="_blank" rel="noopener" class="white-link">https://aptoai.app/</a>
+        today and explore the future of adaptive CRM.
+      </p>
+
+      <div class="buttons" style="justify-content: center;">
+        <a href="https://aptoai.app/" target="_blank" rel="noopener" class="btn btn-white">Visit aptoai.app</a>
+        <a href="https://aptoai.app/" target="_blank" rel="noopener" class="btn btn-orange">Explore AI CRM</a>
+        <a href="https://aptoai.app/" target="_blank" rel="noopener" class="btn btn-outline">Request Demo</a>
+      </div>
+    </section>
+
+    <p class="footer-link">
+      Official Website:
+      <a href="https://aptoai.app/" target="_blank" rel="noopener" class="text-link">https://aptoai.app/</a>
+    </p>
+
+  </div>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Apto AI",
+    "url": "https://aptoai.app/",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Web",
+    "description": "Apto AI is an AI-powered adaptive CRM for lead management, sales automation, workflow automation, and better lead conversion.",
+    "offers": {
+      "@type": "Offer",
+      "url": "https://aptoai.app/"
+    }
+  }
+  </script>
+
+</body>
+</html>
